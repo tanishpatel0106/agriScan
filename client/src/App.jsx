@@ -6,7 +6,7 @@ import Register from "./Pages/Register.jsx";
 import Analysis from "./Pages/Analysis.jsx";
 import ExpertAnalysis from "./Pages/ExpertAnalysis.jsx";
 import SchemesInfo from "./Pages/SchemesInfo.jsx";
-import SharedLayout from "./Components/SharedLayout.jsx";
+import SharedLayout from "./Components/Navbar/SharedLayout.jsx";
 
 function App() {
 
