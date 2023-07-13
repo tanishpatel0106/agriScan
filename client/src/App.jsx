@@ -7,6 +7,7 @@ import Analysis from "./Pages/Analysis.jsx";
 import ExpertAnalysis from "./Pages/ExpertAnalysis.jsx";
 import SchemesInfo from "./Pages/SchemesInfo.jsx";
 import SharedLayout from "./Components/Navbar/SharedLayout.jsx";
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                     <Route path={'/analysis'} element={ <Analysis/> } />
                     <Route path={'/expert-analysis'} element={ <ExpertAnalysis/> }/>
                     <Route path={'/scheme-info'} element={ <SchemesInfo/> } />
+                    <Route path={'/dashboard'} element={ <Dashboard/> } />
                 </Route>
 
 
