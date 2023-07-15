@@ -29,7 +29,7 @@ The AgroCrop app offers various features to assist farmers in managing crop dise
 
 ## Tech Stack Used in application
 
-- The app is build using on the node platform and we have used MERN stack for devloping the web-based application.
+- The app is build using on the node platform for the web-based application.
 - We have build frontend platform on the React.
 - Backend is build on node platform and it uses exoress for the backend connectivity.
 - SQL database is used for managing the data of the app.
