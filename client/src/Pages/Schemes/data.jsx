@@ -5,7 +5,24 @@ export const data =[
     {
         id:1,
         name:'Integrated Pest Management (IPM)',
-        desc:'Integrated Pest Management (IPM) is an effective and environmentally sensitive approach to pest management that relies on a combination of common-sense practices. IPM programs use current, comprehensive information on the life cycles of pests and their interaction with the environment. This information, in combination with available pest control methods, is used to manage pest damage by the most economical means, and with the least possible hazard to people, property, and the environment.'
+        desc:`<p>Integrated Pest Management (IPM) is an approach to pest control and management that focuses on using a combination of preventive measures, biological controls, cultural practices, and targeted use of pesticides to minimize the impact of pests while ensuring the health and sustainability of ecosystems.
+<ul>
+    The key principles of Integrated Pest Management include:
+
+<li>Pest Identification: Accurately identifying the pest species and understanding its biology and behavior is crucial in developing effective control strategies.</li>
+
+    <li>Monitoring and Scouting: Regular monitoring and scouting are carried out to assess pest populations and determine if intervention is necessary. This may involve using traps, visual inspections, or other techniques.</li>
+
+        <li>Prevention: Emphasis is placed on preventing pest infestations through practices such as crop rotation, proper sanitation, good hygiene, and exclusion methods. Creating unfavorable conditions for pests reduces their chances of establishing and spreading.</li>
+
+            <li>Biological Controls: Encouraging natural enemies of pests, such as predators, parasitoids, and beneficial insects, is an important aspect of IPM. These natural enemies help to keep pest populations in check.</li>
+
+                <li>Cultural Controls: Modifying cultural practices can help manage pests. This may involve adjusting planting dates, selecting pest-resistant plant varieties, optimizing irrigation and fertilization practices, and maintaining overall plant health.</li>
+
+                    <li>Mechanical and Physical Controls: Mechanical and physical methods, such as traps, barriers, mulching, and hand-picking, can be used to physically remove pests or create obstacles to their entry or feeding.</li>
+
+                        <li>Chemical Controls as a Last Resort: If non-chemical methods are insufficient, judicious and targeted use of pesticides may be considered. However, pesticides are used as a last resort and are chosen based on their effectiveness, target specificity, and minimal impact on beneficial organisms and the environment.</li></p>`
+
     },
     {
         id:2,
