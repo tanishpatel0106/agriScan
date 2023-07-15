@@ -1,0 +1,52 @@
+body {
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+}
+
+img {
+    float: right;
+    margin: 40px;
+    filter: brightness()
+}
+
+.image {
+    flex-basis: 40%;
+    margin-left: 50px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 20px;
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+.sc{
+    list-style-type: square;
+    color: #ff0000;
+    margin-left: 40px;
+}
+
+a:hover{
+    color: #11999f;
+}
+
+a::after{
+        color:skyblue;
+}
+
+.h{
+    color: black;
+    margin-left: 35%;
+    margin-right: 35%;
+}
