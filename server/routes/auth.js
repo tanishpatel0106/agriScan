@@ -1,36 +1,42 @@
 const express=require("express")
+const mongoose=require("mongoose")
+const userschema =require("../models/User")
 const { body, validationResult } = require('express-validator');
 const { json } = require("body-parser");
 const bcrypt=require("bcrypt")
 const jwt = require('jsonwebtoken');
-const JWT_SECRET="agro_corp_1234"
+const JWT_SECRET="ajsbvjshbabdjvbdsjvhsdhj"
 const fetchuser=require("../middleware/fetchuser")
-const mysql = require("mysql");
 
 const router=express.Router();
 
+mongoose.set('strictQuery', true);
 async function connectToDatabase() {
     try {
-        const con = mysql.createConnection({
-            host : "localhost",
-            user : "root",
-            password : "password",
-            database : "c_d"
+        await mongoose.connect("mongodb://127.0.0.1/agrocrop",
+        {
+            useNewUrlParser:true,
         });
       console.log('Connected to the database successfully!');
+      // Additional code or operations can be placed here
     } catch (error) {
       console.error('Failed to connect to the database:', error);
     }
   }
   
 connectToDatabase();
+
+const User=mongoose.model("User",userschema)
 // User.createIndexes();
 
-// route-1
+// ROUTE-1
+//creating a user on signup POST: "api/auth" doesn't require 
+
 router.post("/createuser",
-body('username').exists(),
-body('password').isLength({min:8}),
+body('name').exists(),
+body('password'),
 body('email').isEmail(),
+body('phone').isLength({min:10,max:10}),
 
 async(req,res)=>{
     let success1=false;
@@ -38,19 +44,29 @@ async(req,res)=>{
     if(!errors.isEmpty()){
         return res.status(400).json({errors:errors.array()})
     }
-    // Query for finding the user if it already exist
+
+    let temp=await User.findOne({"email":req.body.email})
     if(temp){
         return res.status(400).json({error:"user already exists"})
     }
 
     else{
         let pass=req.body.password
-        const secpass=await bcrypt.hash(pass,10)
+        const salt= bcrypt.genSaltSync(10)
+        const secpass=await bcrypt.hash(pass,salt)
 
-        // Query for inserting new user
+        let user=await User.create({
+            name:req.body.name,
+            email:req.body.email,
+            password:secpass,
+            phone:req.body.phone,
+        });
 
-        // fetch the id of user as data 
-
+        const data={
+            user:{
+                id:user.id
+            }
+        }
         const authtoken=jwt.sign(data,JWT_SECRET)
         success1=true;
         res.send({success1,authtoken})
@@ -58,6 +74,7 @@ async(req,res)=>{
 })
 
 // ROUTE -2
+// Login the user POST: /api/auth/login   doesn't require Authentication
 router.post("/login",
 
 body('email').isEmail(),
@@ -74,7 +91,7 @@ async (req,res)=>{
         const {email,password}=req.body;
 
         try {
-            // query to find the user using email
+            const user=await User.findOne({email:email})
             if(!user){
                 res.status(400).json({error:"Incorrect credentials entered!"})
             }
@@ -106,11 +123,12 @@ async (req,res)=>{
 })
 
 //Route -3 
+// Fetching the user details :GET /api/auth/getuser        (Requires Authentication)
 router.get("/getuser",fetchuser,async (req,res)=>{
 
     try {
         const userid=req.user.id;
-        // query for finding the user using its id
+        const user=await User.findById(userid).select("-password");
         res.json(user); 
     } catch (error) {
         console.log(error.message);
@@ -118,15 +136,5 @@ router.get("/getuser",fetchuser,async (req,res)=>{
     }
     })
 
-
-// Route 4
-router.post('/getdisease',(req,res)=>{
-    body('name').exists()
-    body('image').exists()
-    try{
-
-    }
-    catch{}
-})
 
 module.exports=router

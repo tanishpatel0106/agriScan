@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,7 +13,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { NavLink, useLocation } from 'react-router-dom';
 import NavLinkList from "./NavLinkList.jsx";
-
 
 
 const pages = NavLinkList
@@ -40,6 +37,7 @@ function ResponsiveAppBar() {
     };
 
     const handleCloseUserMenu = () => {
+        localStorage.clear()
         setAnchorElUser(null);
     };
 

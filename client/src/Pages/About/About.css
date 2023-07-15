@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+
+p{
+    color: brown;
+}
+
+h1{
+    color: brown;
+}
+
+img{
+    width:100%;
+    height: 600px;
+}
+
+table{
+    margin: 0 50px;
+}
+
+.image{
+    margin-right: 0;
+}
+
+.lauren{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.text{
+    margin: 0 130px 0 130px;
+}
+
+.td{
+    margin: 5px;
+}
+
+.t{
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.para{
+    margin: 0 3px;
+}
+
+.imgp{
+    height: 200px;
+    width: 200px;
+}

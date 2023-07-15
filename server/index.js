@@ -1,13 +1,12 @@
-const express = require('express')
-const app = express()
-const Port = 3000
-
+const express=require("express");
 const body_parser=require("body-parser");
-// const mongoose=require("mongoose");
 const cors=require('cors');
+
+const app=express();
 
 app.use(cors())
 app.use(express.json())
+
 
 app.use(body_parser.urlencoded({extended:true}));
 
@@ -17,6 +16,6 @@ app.get("/",(req,res)=>{
     res.send("hello")
 })
 
-app.listen(Port,(req,res)=>{
-    console.log(`Listening on Port ${Port}`)
+app.listen(5000,()=>{
+    console.log("server started at http://localhost:5000");
 })

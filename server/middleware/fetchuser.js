@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET="agro_corp_1234"
-
+const JWT_SECRET="ajsbvjshbabdjvbdsjvhsdhj"
 
 module.exports= fetchuser=(req,res,next)=>{
     const token=req.header('auth-token')
@@ -16,5 +15,3 @@ module.exports= fetchuser=(req,res,next)=>{
     }
     next()
 }
-
-// module.exports=fetchuser
