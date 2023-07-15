@@ -5,9 +5,9 @@ import './Schemes.css'
 
 const SchemesInfo = () => {
   return (
-    <div>
-      <h1>Government Schemes</h1>
-      <ul>
+    <div class="text">
+      <h1>Government Schemes For Crop Diseases</h1>
+      <ul class="sc">
         {data.map((scheme) => (
           <li key={scheme.id}>
             <Link to={`/scheme-info/${scheme.id}`}>{scheme.name}</Link>
