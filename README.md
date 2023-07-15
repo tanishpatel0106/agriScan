@@ -29,9 +29,25 @@ The AgroCrop app offers various features to assist farmers in managing crop dise
 
 ## Tech Stack Used in application
 
-- The app is build using on the node platform for the web-based application.
-- We have build frontend platform on the React.
-- Backend is build on node platform and it uses exoress for the backend connectivity.
-- SQL database is used for managing the data of the app.
-- For the ML prediction we have prepared model for the crop prediction and the model uses image for predicting the disease of the crop.
+Front-end:
+- React.js: JavaScript library for building user interfaces.
+- Redux: State management library for managing application state and data flow.
+- React Router: Routing library for handling navigation within the app.
+- HTML/CSS: For structuring and styling the user interface.
+- JavaScript: The primary programming language for implementing front-end logic.
+
+Back-end:
+- Node.js: JavaScript runtime environment for executing server-side code.
+- Express.js: Web application framework for building APIs and handling server-side logic.
+- SQL Database: Choose a SQL database management system like MySQL to store crop disease data, user information, and other relevant data.
+- Sequelize: Node.js ORM (Object-Relational Mapping) library for interacting with SQL databases using JavaScript.
+- RESTful API: Design and implement RESTful endpoints for handling data retrieval, processing, and storage.
+
+AI/ML:
+- Image Recognition: Utilize AI/ML frameworks and libraries such as TensorFlow, Keras, or PyTorch to build and train image recognition models for crop disease prediction based on input images.
+- OpenCV: Computer vision library for image preprocessing, feature extraction, and other image-related tasks.
+- Machine Learning Algorithms: Implement machine learning algorithms like decision trees, random forests, or deep learning models for disease prediction based on the extracted image features.
+
+Other tools and libraries:
+- Axios: Promise-based HTTP client for making API requests from the front-end to the back-end.
 
