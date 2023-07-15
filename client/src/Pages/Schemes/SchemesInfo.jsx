@@ -5,6 +5,7 @@ import './Schemes.css'
 
 const SchemesInfo = () => {
   return (
+    <table><tr><td>
     <div class="text">
       <h1>Government Schemes For Crop Diseases</h1>
       <ul class="sc">
@@ -15,6 +16,15 @@ const SchemesInfo = () => {
         ))}
       </ul>
     </div>
+    </td>
+    <td>
+        <div class = "image">
+          <img src =  "ipm.jpg" alt = "My image" width="500" height = "400">
+        </div>
+    </td>
+</tr>
+</table>
+
   );
 };
 
