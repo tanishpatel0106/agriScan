@@ -12,7 +12,7 @@ const SchemeInfoPage = () => {
   return (
     <div>
       <h1 class="h">{scheme.name}</h1>
-      <div dangerouslySetInnerHTML={{ __html: scheme.desc }} />
+      <div class="p" dangerouslySetInnerHTML={{ __html: scheme.desc }} />
     </div>
   );
 };
