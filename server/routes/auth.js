@@ -27,7 +27,6 @@ async function connectToDatabase() {
 connectToDatabase();
 
 const User=mongoose.model("User",userschema)
-// User.createIndexes();
 
 // ROUTE-1
 //creating a user on signup POST: "api/auth" doesn't require 
