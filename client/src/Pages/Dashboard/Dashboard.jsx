@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import "./Dashboard.css"
 import {data} from './data'
+import img from './crop.jpg'
 import { Link } from 'react-router-dom';
 
 const handleSubmit = async (e) => {
@@ -37,7 +38,7 @@ const Dashboard = () => {
               {data.map((post)=>(
                 <div className="post" key={post.id}>
                   <div className="imgContainer">
-                    <img src={data.img} alt="" className='img' />
+                    <img src={img} alt="" className='img' />
                   </div>
                   <div className="dash-content">
                     <h2 className="dashTitle">{post.name}</h2>
@@ -51,7 +52,7 @@ const Dashboard = () => {
           <h1 className='form-title'>Check For the New Disease</h1>
           <input type="name" className="input" placeholder='Name of Plant' />
           <input type="name" className="input" placeholder='Image' />
-          <button className='btn'>Submit</button>
+          <button className='dash-button'>Submit</button>
         </form>
       </div>
     )

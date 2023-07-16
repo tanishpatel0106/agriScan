@@ -35,12 +35,11 @@ function ResponsiveAppBar() {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-
     const handleCloseUserMenu = () => {
         localStorage.clear()
-        setAnchorElUser(null);
+        window.location.replace('/')
     };
-
+    
     return (
         <AppBar position="static" sx={{ bgcolor: '#2a9d8f' }}>
             <Container maxWidth="xl">
@@ -132,7 +131,7 @@ function ResponsiveAppBar() {
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 {/* eslint-disable-next-line react/no-children-prop */}
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" children={'V'} />
+                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" children={'X'} />
                             </IconButton>
                         </Tooltip>
                         <Menu

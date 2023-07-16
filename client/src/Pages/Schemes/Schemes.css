@@ -53,3 +53,6 @@ a::after{
 .p{
     color: browm;
 }
+.scheme-link{
+    text-decoration: none;
+}

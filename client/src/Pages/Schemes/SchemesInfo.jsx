@@ -12,7 +12,7 @@ const SchemesInfo = () => {
       <ul className="sc">
         {data.map((scheme) => (
           <li key={scheme.id}>
-            <Link to={`/scheme-info/${scheme.id}`}>{scheme.name}</Link>
+            <Link to={`/scheme-info/${scheme.id}`} className='scheme-link'>{scheme.name}</Link>
           </li>
         ))}
       </ul>
